@@ -95,7 +95,9 @@ namespace BudgetMaster.API.Controllers
         public async Task<ActionResult> GetBudgetCalculationsByTelegramIdAsync(long telegramId)
         {
             var budgetCalculations = await _budgetCalculationService.GetBudgetCalculationsByTelegramIdAsync(telegramId);
-                return NotFound();
+
+            if( budgetCalculations == null)
+            return NotFound();
 
             var response = budgetCalculations.
                 Select(bc => new BudgetCalculationResponse()
