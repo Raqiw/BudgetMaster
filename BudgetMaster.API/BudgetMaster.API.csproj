@@ -1,0 +1,28 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <GenerateDocumentationFile>True</GenerateDocumentationFile>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="CSharpFunctionalExtensions" Version="2.41.0" />
+    <PackageReference Include="Microsoft.IdentityModel.JsonWebTokens" Version="7.4.0" />
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="6.5.0" />
+    <PackageReference Include="System.IdentityModel.Tokens.Jwt" Version="7.4.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Resources\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\BudgetMaster.IApplication\BudgetMaster.IApplication.csproj" />
+    <ProjectReference Include="..\BudgetMaster.IPersistence\BudgetMaster.IPersistence.csproj" />
+    <ProjectReference Include="..\BudgetMaster.Persistence\BudgetMaster.Persistence.csproj" />
+    <ProjectReference Include="..\BudgetMaster.Application\BudgetMaster.Application.csproj" />
+  </ItemGroup>
+
+</Project>
